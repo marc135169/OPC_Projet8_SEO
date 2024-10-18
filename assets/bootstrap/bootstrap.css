@@ -103,16 +103,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   line-height: 1.2;
 }
 
-h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
-  /*position: absolute;*/
-  /*color: white;
-  text-shadow: 1px 1px 10px #000;
-  bottom: 3rem;
-  letter-spacing: 0.1rem;
-  opacity: 1;*/
-  margin-left: 5.3rem;
-}
 @media (min-width: 1200px) {
   h1, .h1 {
     font-size: 2.5rem;
@@ -120,20 +110,20 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: 1.75rem;
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1rem + 0.6vw);
 }
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 1.75rem;
+    font-size: 1rem;
   }
 }
 
