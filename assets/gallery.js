@@ -1,14 +1,17 @@
 // Liste des images et des tags associés
+import {generateModal} from "./modal.js";
+
 const allImages = [
-        { src: "./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp", tag: "Concert" },
-        { src: "./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp", tag: "Entreprises" },
-        { src: "./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp", tag: "Entreprises" },
-        { src: "./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp", tag: "Mariages" },
-        { src: "./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp", tag: "Portrait" },
-        { src: "./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp", tag: "Mariages" },
-        { src: "./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp", tag: "Portrait" },
-        { src: "./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp", tag: "Concert" },
-        { src: "./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp", tag: "Entreprises" }
+        { src: "./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp", tag: "Concert", alt: "Photo" +
+                    " de concert en intérieur" },
+        { src: "./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp", tag: "Entreprises", alt: "Portrait d'entreprise de Ali Morshedlou" },
+        { src: "./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp", tag: "Entreprises", alt: "Portrait d'entreprise de Jason Goodman" },
+        { src: "./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp", tag: "Mariages", alt: "Photo de mariage, mains des mariés" },
+        { src: "./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp", tag: "Portrait", alt: "Portrait de Ade Tunji fermant les yeux" },
+        { src: "./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp", tag: "Mariages", alt: "Photo de mariage, les mariés se regardent" },
+        { src: "./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp", tag: "Portrait", alt: "Portrait de Nino van prattenburg en extérieur" },
+        { src: "./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp", tag: "Concert", alt: "Photo d'un concert d'Austin Neill" },
+        { src: "./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp", tag: "Entreprises", alt: "Photo d'entreprise de Mateus Campos felipe" }
 ];
 
 
@@ -37,50 +40,47 @@ function createTagButtons() {
                 button.classList.add('tag-button');
                 tagContainerElement.appendChild(button);
         });
-
-        // Ajouter des événements aux boutons
+        
         document.querySelectorAll('.tag-button').forEach(button => {
                 button.addEventListener('click', function() {
                         const selectedTag = this.getAttribute('data-tag');
-                        filterImages(selectedTag);
+                        filterImages(selectedTag);                        
                         
-                        // Enlever la classe "active" de tous les boutons
                         document.querySelectorAll('.tag-button').forEach(btn => btn.classList.remove('active'));
 
-                        // Ajouter la classe "active" au bouton cliqué
                         this.classList.add('active');
                 });
         });
 }
 
-// Filtrer et afficher les images selon le tag
+
 function filterImages(tag) {
-        // Vider le conteneur de la galerie
-        galleryContainer.innerHTML = '';
-
-        // Filtrer les images
+        
+        galleryContainer.innerHTML = '';        
+        galleryContainer.classList.remove('gallery-animation');        
+        void galleryContainer.offsetWidth;        
+        galleryContainer.classList.add('gallery-animation');
+        
         const filteredImages = tag === 'all' ? allImages : allImages.filter(image => image.tag === tag);
-
-        // Générer les images avec des conteneurs
+    
         filteredImages.forEach(image => {
-                // Créer un div pour contenir chaque image
+                
                 const imageContainer = document.createElement('div');
-                imageContainer.classList.add('image-container'); // Classe pour personnaliser via le CSS
+                imageContainer.classList.add('image-container');
 
-                // Créer l'élément image
+                
                 const imgElement = document.createElement('img');
                 imgElement.src = image.src;
+                imgElement.alt = image.alt;
                 imgElement.classList.add('gallery-item');
                 imgElement.setAttribute('data-gallery-tag', image.tag);
 
-                // Ajouter l'image dans le conteneur
-                imageContainer.appendChild(imgElement);
-
-                // Ajouter le conteneur d'image à la galerie
-                galleryContainer.appendChild(imageContainer);
+                
+                imageContainer.appendChild(imgElement);                
+                galleryContainer.appendChild(imageContainer);                
+                
         });
+        generateModal();
 }
-
-// Initialiser la galerie
 createTagButtons();
-filterImages('all'); // Afficher toutes les images par défaut
+filterImages('all');
