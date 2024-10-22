@@ -1,9 +1,11 @@
 
 export function generateModal() {
     const modal = document.querySelector(".modal");
+    const modalContentDiv = document.querySelector(".modal-content-div");
     const modalImg = document.querySelector(".modal-content");
     const prevElement = document.querySelector(".prev");
     const nextElement = document.querySelector(".next");
+    
 
     let currentIndex = 0;
     const images = document.querySelectorAll('.gallery-item');
