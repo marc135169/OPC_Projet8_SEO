@@ -115,16 +115,18 @@ body {
 	display: flex;
 	flex-direction: column;
     justify-content: start;
+    align-items: center;
 	
 }
 
 .gallery-container {
-    display: flex;    
+    display: flex;     
     flex-wrap: wrap;
     width: 100%;
-    padding: 16px 12px;
-    
+    max-width: 80%;
+    padding: 16px 12px;    
 }
+
 .gallery-animation{
     animation: growUp 1s ease-in-out;
     transform-origin: top left;
@@ -141,6 +143,8 @@ body {
 }
 .image-container {
     width: 100%;
+    max-height: 21rem;
+    max-width: 21rem;
     aspect-ratio: 1/1;
     overflow: hidden;
     padding: 0.5rem;
@@ -489,7 +493,7 @@ input[type="submit"] {
         padding: 46px 0;
     }
     .gallery-container {
-        padding: 16px 0;
+        padding: 16px 0;       
     }
     .image-container {        
         flex: 1 calc(100%);
@@ -499,6 +503,42 @@ input[type="submit"] {
         width: 357px;        
     }    
 }
+
+@media all and (max-width: 768px) {
+    .gallery-container {        
+        padding: 16px 0;
+        max-width: 100%;
+    }   
+    .image-container {
+        max-width: 208px;
+        height: 208px;        
+    }
+    .gallery-item {
+        width: 208px;
+        height: 208px;
+    }
+}
+
+@media all and (max-width: 375px) {
+    .gallery-container {
+        display: flex;
+        align-items: center;
+        padding: 16px 0;
+        max-width: 100%;
+    }
+
+    .image-container {
+        min-height: 375px;
+        max-width: 375px;
+    }
+
+    .gallery-item {
+        width: 375px;
+        height: 375px;
+    }
+
+}
+
 
 
 
