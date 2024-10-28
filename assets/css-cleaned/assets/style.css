@@ -45,7 +45,7 @@ body {
     padding-block: 100px;
     position: relative;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
 }
 .picture.left::before {
     content: ' ';
@@ -88,45 +88,45 @@ body {
     font-size: 14px;
 }
 .tag-container {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 2.4rem 0 0.5rem;
+	gap: 1.5rem;
+    margin: 2.4rem 0 0.5rem;    
 }
 .tag-container button {
-    border: none;
-    background: none;
-    position: relative;
-    font-size: 1rem;
-    padding: 0.4rem 0.9rem;
-    color: black;
-    cursor: pointer;
+	border: none;
+	background: none;
+	position: relative;
+	font-size: 1rem;
+	padding: 0.4rem 0.9rem;
+	color: black;
+	cursor: pointer;
     font-weight: lighter;
-    transition: color 0.3s ease;
+	transition: color 0.3s ease;
 }
 .tag-button.active {
     background-color: #BEB45A;
-    color: #454545FF;
+	color: #454545FF;
     font-weight: bold;
 }
 
 #gallery {
     padding: 0 3rem;
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
     justify-content: start;
     align-items: center;
-
+	
 }
 
 .gallery-container {
-    display: flex;
+    display: flex; 
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     max-width: 80%;
-    padding: 16px 12px;
+    padding: 16px 12px;    
 }
 
 .gallery-animation{
@@ -170,23 +170,23 @@ body {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.65);
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
 .modal-content-div {
-    position: relative;
-    display: flex;
+    position: relative; 
+    display: flex;    
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
     margin: 1rem;
-    display: block;
-    width: 498px;
+    display: block;    
+    width: 498px;       
     top: 0;
     left: 0;
     background: white;
-    padding: 1rem;
+    padding: 1rem;    
 }
 
 .prev, .next {
@@ -204,7 +204,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-.prev {
+.prev {  
     height: 30px;
     width: 30px;
     left: 3px;
@@ -361,7 +361,7 @@ input[type="submit"] {
         text-align: center;
         margin-top: 1em;
     }
-
+    
     .about-me__introduction {
         width: 100%;
     }
@@ -461,26 +461,26 @@ input[type="submit"] {
         padding: 46px 0;
     }
     .gallery-container {
-        padding: 16px 0;
+        padding: 16px 0;       
     }
-    .image-container {
+    .image-container {        
         flex: 1 calc(100%);
         padding: 12px 12px;
-
+        
     }
     .modal-content {
-        width: 357px;
-    }
+        width: 357px;        
+    }    
 }
 
 @media all and (max-width: 768px) {
-    .gallery-container {
+    .gallery-container {        
         padding: 16px 0;
         max-width: 100%;
-    }
+    }   
     .image-container {
         max-width: 208px;
-        height: 208px;
+        height: 208px;        
     }
     .gallery-item {
         width: 208px;

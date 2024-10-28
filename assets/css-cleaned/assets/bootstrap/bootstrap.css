@@ -354,27 +354,27 @@ textarea {
 }
 
 @media (min-width: 576px) {
-  .container {
+   .container {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container {
+   .container {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+   .container {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+   .container {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container {
+   .container {
     max-width: 1320px;
   }
 }
@@ -434,7 +434,7 @@ textarea {
 .btn:hover {
   color: #212529;
 }
-.btn:focus {
+ .btn:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
@@ -1213,7 +1213,7 @@ textarea {
   z-index: 1020;
 }
 
-.visually-hidden {
+.visually-hidden {  
   display: none;
 }
 

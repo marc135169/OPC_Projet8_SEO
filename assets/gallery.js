@@ -13,15 +13,9 @@ const allImages = [
         { src: "./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp", tag: "Concert", alt: "Photo d'un concert d'Austin Neill" },
         { src: "./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp", tag: "Entreprises", alt: "Photo d'entreprise de Mateus Campos felipe" }
 ];
-
-
 const tagContainerElement = document.querySelector(".tag-container");
 const galleryContainer = document.querySelector(".gallery-container");
-
-
 const tags = [...new Set(allImages.map(image => image.tag))];
-
-
 /**
  * @description create filter buttons for tags
  * @return {void}
@@ -52,8 +46,6 @@ function createTagButtons() {
                 });
         });
 }
-
-
 function filterImages(tag) {
         
         galleryContainer.innerHTML = '';        
