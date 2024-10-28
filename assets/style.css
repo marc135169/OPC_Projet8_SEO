@@ -120,7 +120,8 @@ body {
 }
 
 .gallery-container {
-    display: flex;     
+    display: flex; 
+    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     max-width: 80%;
@@ -497,7 +498,8 @@ input[type="submit"] {
     }
     .image-container {        
         flex: 1 calc(100%);
-        padding: 12px 0;
+        padding: 12px 12px;
+        
     }
     .modal-content {
         width: 357px;        

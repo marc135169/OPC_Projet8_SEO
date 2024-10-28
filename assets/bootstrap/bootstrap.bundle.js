@@ -2084,7 +2084,7 @@
 
   // import { isHTMLElement } from './instanceOf';
   function getBoundingClientRect(element, // eslint-disable-next-line unused-imports/no-unused-vars
-  includeScale) {
+  ) {
 
     var rect = element.getBoundingClientRect();
     var scaleX = 1;
@@ -2433,7 +2433,7 @@
       } // $FlowFixMe[incompatible-cast]: force type refinement, we compare offsetParent with window above, but Flow doesn't detect it
 
 
-      offsetParent = offsetParent;
+      
 
       if (placement === top || (placement === left || placement === right) && variation === end) {
         sideY = bottom; // $FlowFixMe[prop-missing]
