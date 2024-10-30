@@ -1,6 +1,4 @@
-// Liste des images et des tags associés
 import {generateModal} from "./modal.js";
-
 const allImages = [
         { src: "./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp", tag: "Concert", alt: "Photo" +
                     " de concert en intérieur" },
@@ -16,25 +14,19 @@ const allImages = [
 const tagContainerElement = document.querySelector(".tag-container");
 const galleryContainer = document.querySelector(".gallery-container");
 const tags = [...new Set(allImages.map(image => image.tag))];
-/**
- * @description create filter buttons for tags
- * @return {void}
- */
 function createTagButtons() {
         const allButton = document.createElement('button');
         allButton.textContent = 'Tous';
         allButton.setAttribute('data-tag', 'all');
         allButton.classList.add('tag-button', 'active');
         tagContainerElement.appendChild(allButton);
-
         tags.forEach(tag => {
                 const button = document.createElement('button');
                 button.textContent = tag;
                 button.setAttribute('data-tag', tag);
                 button.classList.add('tag-button');
                 tagContainerElement.appendChild(button);
-        });
-        
+        });        
         document.querySelectorAll('.tag-button').forEach(button => {
                 button.addEventListener('click', function() {
                         const selectedTag = this.getAttribute('data-tag');
@@ -51,26 +43,18 @@ function filterImages(tag) {
         galleryContainer.innerHTML = '';        
         galleryContainer.classList.remove('gallery-animation');        
         void galleryContainer.offsetWidth;        
-        galleryContainer.classList.add('gallery-animation');
-        
-        const filteredImages = tag === 'all' ? allImages : allImages.filter(image => image.tag === tag);
-    
-        filteredImages.forEach(image => {
-                
+        galleryContainer.classList.add('gallery-animation');        
+        const filteredImages = tag === 'all' ? allImages : allImages.filter(image => image.tag === tag);    
+        filteredImages.forEach(image => {                
                 const imageContainer = document.createElement('div');
-                imageContainer.classList.add('image-container');
-
-                
+                imageContainer.classList.add('image-container');                
                 const imgElement = document.createElement('img');
                 imgElement.src = image.src;
                 imgElement.alt = image.alt;
                 imgElement.classList.add('gallery-item');
-                imgElement.setAttribute('data-gallery-tag', image.tag);
-
-                
+                imgElement.setAttribute('data-gallery-tag', image.tag);                
                 imageContainer.appendChild(imgElement);                
                 galleryContainer.appendChild(imageContainer);                
-                
         });
         generateModal();
 }

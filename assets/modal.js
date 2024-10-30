@@ -1,4 +1,3 @@
-
 export function generateModal() {
     const modal = document.querySelector(".modal");    
     const modalImg = document.querySelector(".modal-content");
