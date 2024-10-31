@@ -32,7 +32,7 @@ Ce projet consiste en l'optimisation du site web de **Nina Carducci**, une photo
 ## Instructions d'Utilisation
 1. **Téléchargement** : Clonez ce dépôt sur votre machine locale :
    ```sh
-   git clone [url-du-repository]
+   git clone [https://github.com/marc135169/OPC_Projet8_SEO.git]
    ```
 2. **Ouvrir le Projet** : Ouvrez le fichier `index.html` dans votre navigateur pour voir la version optimisée du site.
 
@@ -42,10 +42,10 @@ Ce projet consiste en l'optimisation du site web de **Nina Carducci**, une photo
 - **SEO** : L'ajout de balises meta et de **Rich Snippets** a permis d'améliorer les scores SEO et de cibler des recherches locales (Île-de-France).
 
 ## Contributeurs
-- **[Votre Nom]** : Développeur freelance spécialisé en SEO et optimisation web.
+- **[TETART Marc]** : (RolePlay) Développeur freelance spécialisé en SEO et optimisation web.
 
 ## Contact
-Pour toute question ou suggestion, veuillez contacter [votre-email@example.com].
+Pour toute question ou suggestion, veuillez contacter [marc.tetart@proton.me].
 
 ## License
 Ce projet est sous licence MIT. Vous êtes libre de l'utiliser, de le modifier et de le distribuer sous les mêmes termes.
