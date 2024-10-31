@@ -10,7 +10,7 @@ export function generateModal() {
             modal.style.display = "flex";
             modalImg.src = this.src;
             modalImg.alt = this.alt;
-            currentIndex = index; // Save the current index of the clicked image
+            currentIndex = index;
         });
     });
     prevElement.addEventListener('click', function() {
