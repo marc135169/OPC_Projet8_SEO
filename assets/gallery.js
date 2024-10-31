@@ -14,6 +14,11 @@ const allImages = [
 const tagContainerElement = document.querySelector(".tag-container");
 const galleryContainer = document.querySelector(".gallery-container");
 const tags = [...new Set(allImages.map(image => image.tag))];
+
+/**
+ * Create the tag buttons
+ * @description Create the tag buttons and add the event listener
+ */
 function createTagButtons() {
         const allButton = document.createElement('button');
         allButton.textContent = 'Tous';
@@ -38,6 +43,11 @@ function createTagButtons() {
                 });
         });
 }
+/**
+ * Filter the images
+ * @param {string} tag 
+ * @description Filter the images by the tag
+ */
 function filterImages(tag) {
         
         galleryContainer.innerHTML = '';        

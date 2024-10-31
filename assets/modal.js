@@ -1,3 +1,7 @@
+/**
+ * Generate the modal
+ * @description Create the modal and add the event listener * 
+ */
 export function generateModal() {
     const modal = document.querySelector(".modal");    
     const modalImg = document.querySelector(".modal-content");
